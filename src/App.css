@@ -11,6 +11,10 @@
 /* Navbar Styling */
 .navbar {
   background-color: var(--primary-color) !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   
 }
 
@@ -53,193 +57,245 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Apply background image */
-.hero {
-  margin-top: 80px;
-  background: url("https://ppeplus.us/wp-content/uploads/2017/11/1806fcompliance_adobestock_112939605-1.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100vh; /* Ensure full screen */
-  width: 100%;
-  color: white;
-  position: relative;
+.services-section {
+  background-color: #fef7fc; /* Light pink background */
+  padding: 60px 0;
+  border-radius: 80px 0 80px 0; /* Curved edges */
+}
+
+.service-box {
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  text-align: left; /* Align text */
-  overflow: hidden; /* Prevent extra scrolling */
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Add a semi-transparent overlay */
-/* Add a semi-transparent overlay */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  pointer-events: none; /* Allow interactions through */
+.service-content {
+  max-width: 50%;
 }
 
-
-/* Ensure content is above the overlay */
-.hero .containers {
-  position: relative;
-  z-index: 2;
-  max-width: 80%; /* Adjust width */
-}
-
-/* Styling for text */
-.Caption {
-  font-size: 2.5rem;
+.service-title {
+  color: #002dc2; /* Blue title */
   font-weight: bold;
+  font-size: 24px;
 }
 
-/* Button Styling */
-.btn-outline-success {
-  border-color: white;
-  color: white;
+.service-text {
+  color: #666;
+  font-size: 16px;
+}
+
+.learn-more-btn {
+  border: 2px solid #002dc2;
+  color: #002dc2;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 30px;
   transition: 0.3s;
 }
 
-.btn-outline-success:hover {
-  background-color: #003366;
-  color:#FFD700;
+.learn-more-btn:hover {
+  background-color: #002dc2;
+  color: white;
 }
 
-/* Services Section Styling */
-.services-container {
-  margin-top: 80px;
+.service-image {
+  max-width: 40%;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+}
+
+
+.service-map-section {
+  padding: 60px 0;
+}
+
+.service-box {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the cards */
-  gap: 20px; /* Space between cards */
-  padding: 40px;
-  background-color: var(--background-color);
-}
-
-/* Individual Card Styling */
-.card {
-  width: 18rem;
-  border: 2px solid var(--primary-color); /* Blue border */
+  align-items: flex-start;
+  background-color: #f9f9f9;
   border-radius: 10px;
-  overflow: hidden;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  padding: 30px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-}
-
-/* Card Image */
-.card-img-top {
-  height: 180px;
-  object-fit: cover;
-}
-
-/* Card Body */
-.card-body {
-  text-align: center;
-  padding: 15px;
-}
-
-.card-title {
-  font-size: 1.3rem;
+.service-title {
   font-weight: bold;
-  color: var(--primary-color);
+  font-size: 20px;
+  color: #002dc2;
+  min-width: 200px; /* Ensures alignment */
 }
 
-.card-text {
-  font-size: 1rem;
+.service-content {
+  flex-grow: 1;
+}
+
+.service-content ul {
+  padding-left: 20px;
+}
+
+.service-content li {
+  font-size: 16px;
   color: #333;
+  margin-bottom: 10px;
 }
 
-/* List Group inside the Card */
-.list-group-item {
-  font-size: 0.9rem;
-  background-color: white;
-  color: var(--primary-color);
+.contact-section {
+  background-color: #f5faff;
+  padding: 60px 20px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
 }
 
-/* Card Links */
-.card-body a {
-  text-decoration: none;
+.contact-section h2 {
   font-weight: bold;
-  color: var(--secondary-color);
-  transition: color 0.3s ease-in-out;
+  color: #002dc2;
 }
 
-.card-body a:hover {
-  color: var(--primary-color);
-}
-
-/* General Contact Form Styling */
-.contact-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: url("https://source.unsplash.com/1600x900/?office,communication") no-repeat center center/cover;
-  padding: 20px;
-}
-
-/* Contact Form Box */
 .contact-form {
-  background: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.contact-form h2 {
-  color: #003366;
-  font-size: 2rem;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
   margin-bottom: 15px;
 }
 
-.contact-form p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 20px;
+.contact-form textarea {
+  resize: none;
+  height: 120px;
 }
 
-/* Form Fields */
-.form-group label {
-  font-weight: bold;
-  color: #333;
-}
-
-.form-control {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  font-size: 1rem;
-}
-
-/* Submit Button */
-.submit-btn {
+.contact-form button {
   width: 100%;
-  margin-top: 15px;
-  background: #003366;
-  border: none;
   padding: 12px;
-  font-size: 1.1rem;
+  background-color: #002dc2;
+  color: #fff;
+  border: none;
+  font-size: 18px;
   border-radius: 5px;
-  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.submit-btn:hover {
-  background: #002244;
+.contact-form button:hover {
+  background-color: #001b99;
 }
 
-.card-img2-top {
-  width: 80px; 
-  height: 80px;
-  margin: 10px auto;
+/* Floating circles */
+.contact-section::before,
+.contact-section::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 100, 255, 0.1);
+  border-radius: 50%;
+}
+
+.contact-section::before {
+  width: 100px;
+  height: 100px;
+  top: 20px;
+  left: 30px;
+}
+
+.contact-section::after {
+  width: 150px;
+  height: 150px;
+  bottom: 30px;
+  right: 40px;
+}
+
+.service-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Section Styling */
+.why-choose-us {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 0;
+  background-color: var(--background-color); /* Light Gray Background */
+}
+
+/* Subtitle */
+.why-choose-us h3 {
+  color: var(--primary-color);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.why-choose-us h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* Features Grid */
+.why-choose-us .features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Feature Item */
+.feature-item {
+  text-align: left;
+  padding: 15px;
+}
+
+.feature-item strong {
+  font-size: 18px;
+  color: #000;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Number Styling */
+.feature-item span {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
   display: block;
-  transition: transform 0.3s ease-in-out;
+  margin-bottom: 5px;
+}
+
+/* Style for all headings */
+h2, h3 {
+  color: #007bff; /* Bootstrap primary blue */
+}
+
+.blue-heading {
+  color: #007bff;
+  font-weight: bold;
 }
